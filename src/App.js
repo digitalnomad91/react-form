@@ -17,6 +17,9 @@ function App() {
     e.preventDefault();
     var errors = validate(formValues);
     setFormErrors(errors);
+
+    if(Object.keys(errors).length !== 0) return false;
+
     setIsSubmit(true);
     
 
