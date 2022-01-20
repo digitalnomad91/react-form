@@ -1,5 +1,7 @@
 import {React, useState} from "react";
 
+import FormInput from './components/FormInput'
+
 
 function App() {
 
@@ -69,17 +71,15 @@ return (
     <h2> Customer Form</h2>
      <div className="divider"></div>
       <div className="form">
-        <div className="field">
-         <label> Customer Name:</label>
-         <input
-          type="text"
+        <FormInput
           name='username'
           placeholder="Username"
           value= {formValues.username}
-          onChange={handleChange}
-         />
-         </div>
-         <p>{formErrors.username}</p>
+          handleChange={handleChange}
+          formErrors={formErrors}
+          formValues={formValues}
+          
+        />
         <div className="field">
         <label>Email:</label>
         <input
