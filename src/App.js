@@ -78,30 +78,23 @@ return (
           handleChange={handleChange}
           formErrors={formErrors}
           formValues={formValues}
-          
         />
-        <div className="field">
-        <label>Email:</label>
-        <input
-          type="email"
+        <FormInput
           name='email'
           placeholder="Email"
           value= {formValues.email}
-          onChange={handleChange}
+          handleChange={handleChange}
+          formErrors={formErrors}
+          formValues={formValues}
         />
-        </div>
-        <p>{formErrors.email}</p>
-        <div className="field">
-        <label>Zip Code</label>
-        <input
-          type="text"
+        <FormInput
           name='zipcode'
           placeholder="Zip Code"
           value= {formValues.zipcode}
-          onChange={handleChange}
+          handleChange={handleChange}
+          formErrors={formErrors}
+          formValues={formValues}
         />
-        </div>
-        <p>{formErrors.zipcode}</p>
         <button>Submit</button>
     </div>
     </form>
