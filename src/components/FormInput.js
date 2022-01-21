@@ -12,7 +12,7 @@ const formInput = (props) => {
           onChange={props.handleChange}
          />
          </div>
-         <p>{props.formErrors.username}</p>
+         <p>{props.formErrors[props.name]}</p>
       </div>
     );
 }
